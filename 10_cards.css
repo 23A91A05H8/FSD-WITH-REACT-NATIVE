@@ -1,0 +1,25 @@
+.card-section{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+
+.card{
+    width:350px;
+    height:450px;
+    border:2px solid black;
+    border-radius:10%;
+    display:flex;
+    flex-direction:column;
+    padding-top:20px;
+    align-items:center;
+}
+.image-section{
+    width:90%;
+    height:350px;
+}
+.image-section img{
+    width:100%;
+    border-radius:10%;
+}

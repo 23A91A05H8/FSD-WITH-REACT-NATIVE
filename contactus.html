@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DreamConnect - Contact Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0e3a5b;
+      color: #fff;
+    }
+
+    .top-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      background-color: rgba(255, 255, 255, 0.15);
+      padding: 15px;
+      margin-bottom: 10px;
+      backdrop-filter: blur(8px);
+    }
+
+    .top-nav a {
+      text-decoration: none;
+      padding: 10px 20px;
+      background-color: #00bcd4;
+      color: white;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .top-nav a:hover {
+      background-color: #0195a1;
+    }
+
+    .contact-header {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(5px);
+    }
+
+    main {
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 30px 20px;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    .contact-form, .contact-info {
+      flex: 1;
+      min-width: 300px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    .contact-form h2, .contact-info h2 {
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      background-color: rgba(255,255,255,0.9);
+      color: #333;
+    }
+
+    .send-btn {
+      background-color: #2196f3;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .send-btn:hover {
+      background-color: #0d8ddb;
+    }
+
+    .card-buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .card-buttons button {
+      flex: 1;
+      padding: 16px 0;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .card-buttons button:hover {
+      transform: scale(1.05);
+    }
+
+    .card-buttons button:first-child {
+      background: #4caf50;
+    }
+
+    .card-buttons button:last-child {
+      background:green;
+    }
+
+    .contact-info p {
+      margin: 12px 0;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #ffffff;
+    }
+
+    .contact-info i {
+      font-size: 20px;
+    }
+
+    .contact-info .fa-envelope {
+      color: #ff5252;
+    }
+
+    .contact-info .fa-phone {
+      color: #4caf50;
+    }
+
+    .contact-info .fa-map-marker-alt {
+      color: #ff9800;
+    }
+    .main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0077b6;
+  padding: 10px 30px;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #caf0f8;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: rgba(0,0,0,0.3);
+      font-size: 14px;
+      color: #e0f7fa;
+      backdrop-filter: blur(5px);
+    }
+  </style>
+</head>
+<body>
+
+ <!-- Header Section -->
+<header class="main-header">
+  <div class="logo">DreamConnect</div>
+  <nav class="nav-links">
+    <a href="home.html">Home</a>
+    <a href="explore.html">Explore</a>
+    <a href="mydreamwall.html">MyDreamWall</a>
+    <a href="community.html">Community</a>
+    <a href="contact.html">ContactUs</a>
+    <img src="profile.jpg" alt="Profile" class="profile-pic" />
+  </nav>
+</header>
+
+
+  <header class="contact-header">
+    <h1>📬 Contact DreamConnect</h1>
+    <p>We’re here to listen, help, and connect!</p>
+  </header>
+
+  <main>
+    <section class="contact-container">
+      <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form>
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea rows="5" placeholder="Your Message / Suggestion" required></textarea>
+          <button type="submit" class="send-btn"><i class="fas fa-paper-plane"></i> Send</button>
+        </form>
+
+        <div class="card-buttons">
+          <button><i class="fas fa-comment-dots"></i> Chat</button>
+        </div>
+      </div>
+
+      <div class="contact-info">
+        <h2>Contact Details</h2>
+        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> support@dreamconnect.com</p>
+        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +91 98765 43210</p>
+        <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> Guntur, Andhra Pradesh, India</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 DreamConnect • Built for dreamers</p>
+  </footer>
+
+</body>
+</html>

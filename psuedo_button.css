@@ -1,0 +1,31 @@
+.demo{
+    position:relative;
+    z-index:1;
+    font-size:20px;
+    border-radius:3px;
+    border:5px solid yellowgreen;
+    overflow:hidden;
+    padding:10px;
+    color:red;
+
+}
+.demo::before{
+    content:"";
+    z-index:-1;
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0px;
+    background-color: bisque;
+    transform: translateX(-100px);
+    transition:transform .5s linear;
+}
+body{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    height:100svh;
+}
+.demo:hover::before{
+    transform:translateX(0pX);
+}

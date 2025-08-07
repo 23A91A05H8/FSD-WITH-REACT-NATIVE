@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DreamConnect - Profile</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background:
+        linear-gradient(rgba(173, 216, 230, 0.6), rgba(173, 216, 230, 0.6)),
+        url('https://pikwizard.com/pw/medium/bd387e211193998807eef42796d58b77.jpg') no-repeat center center fixed;
+    
+      background-size: cover;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 18px 0;
+      backdrop-filter: blur(8px);
+      font-weight: bold;
+    }
+
+    .top-nav a {
+      text-decoration: none;
+      padding: 12px 24px;
+      background-color: #00bcd4;
+      color: white;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .top-nav a:hover {
+      background-color: #0195a1;
+    }
+
+    header {
+      position: relative;
+      text-align: center;
+      padding: 30px 20px 40px;
+      flex-shrink: 0;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      margin-bottom: 12px;
+    }
+
+    .logout-btn {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      background: linear-gradient(135deg, #4dd0e1, #0288d1);
+      border: none;
+      padding: 14px 26px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+      color: white;
+      transition: background 0.3s;
+    }
+
+    .logout-btn:hover {
+      background: linear-gradient(135deg, #0288d1, #4dd0e1);
+    }
+
+    main.profile-container {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      padding: 0 40px 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+    }
+
+    .profile-card {
+      background-color: rgba(0, 0, 0, 0.45);
+      padding: 40px 30px;
+      border-radius: 20px;
+      text-align: center;
+      width: 35%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .profile-card img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 5px solid #00bcd4;
+      object-fit: cover;
+    }
+
+    .profile-card h2 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .profile-card p {
+      margin: 4px 0;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .dream-list {
+      margin-top: 30px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .dream-list h3 {
+      color: #ffeead;
+      margin-bottom: 15px;
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    .dream-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .dream-card {
+      background-color: rgba(0, 188, 212, 0.3);
+      border-radius: 15px;
+      padding: 18px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: white;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+
+    .dream-card:hover {
+      transform: scale(1.05);
+      background-color: rgba(0, 188, 212, 0.6);
+    }
+
+    .progress-section {
+      background-color: rgba(0, 0, 0, 0.45);
+      padding: 35px 30px;
+      border-radius: 20px;
+      width: 75%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .progress-section h3 {
+      margin: 0 0 20px;
+      color: #ffeead;
+      font-size: 1.9rem;
+      font-weight: 700;
+    }
+    
+    .step-box {
+      padding: 16px 20px;
+      background: rgba(255, 255, 255, 0.15);
+      border-left: 8px solid #00e676;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      font-size: 1.15rem;
+    }
+
+    .step-box.incomplete {
+      border-left-color: #ff9800;
+    }
+
+    .step-status {
+      font-size: 28px;
+      user-select: none;
+    }
+
+    .bar {
+      width: 100%;
+    }
+
+    .bar label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .progress {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.25);
+      border-radius: 25px;
+      overflow: hidden;
+      height: 24px;
+    }
+
+    .progress div {
+      height: 100%;
+      background-color: #00e5ff;
+      text-align: right;
+      padding-right: 12px;
+      line-height: 24px;
+      font-weight: 700;
+      color: black;
+      font-size: 1rem;
+      border-radius: 25px 0 0 25px;
+      transition: width 0.5s ease;
+    }
+
+    .legend {
+      background-color: rgba(255, 255, 255, 0.18);
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #fafafa;
+    }
+
+    .legend h4 {
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #ffeead;
+    }
+
+    footer {
+      text-align: center;
+      padding: 18px 10px;
+      background-color: rgba(0, 0, 0, 0.3);
+      font-size: 14px;
+      color: #e0f7fa;
+      flex-shrink: 0;
+    }
+
+    .main-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #0077b6;
+      padding: 10px 30px;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #caf0f8;
+    }
+
+    .profile-pic {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+      cursor: pointer;
+    }
+
+    /* New Social Highlights Section */
+    .social-highlights {
+      background-color: rgba(0, 0, 0, 0.45);
+      width: 40%;
+      padding: 35px 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      color: #fff;
+      font-weight: 600;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      font-size: 1.15rem;
+    }
+
+    .social-highlights h3 {
+      color: #ffeead;
+      margin: 0 0 15px 0;
+      font-weight: 700;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    .highlight-item {
+      background: rgba(0, 188, 212, 0.3);
+      border-radius: 15px;
+      padding: 20px 15px;
+      text-align: center;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s ease;
+      cursor: default;
+    }
+
+    .highlight-item:hover {
+      background-color: rgba(0, 188, 212, 0.6);
+    }
+
+    @media (max-width: 1100px) {
+      main.profile-container {
+        flex-wrap: wrap;
+        gap: 40px;
+        padding: 20px;
+      }
+
+      .profile-card, .progress-section, .social-highlights {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .progress-section {
+        width: 100%;
+      }
+
+      .social-highlights {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- Header Section -->
+<header class="main-header">
+  <div class="logo">DreamConnect</div>
+  <nav class="nav-links">
+    <a href="home.html">Home</a>
+    <a href="explore.html">Explore</a>
+    <a href="mydreamwall.html">MyDreamWall</a>
+    <a href="community.html">Community</a>
+    <a href="contact.html">ContactUs</a>
+    <img src="profile.jpg" alt="Profile" class="profile-pic" />
+  </nav>
+</header>
+
+<header>
+  <h1>👤 My Profile</h1>
+  <button class="logout-btn">Logout</button>
+</header>
+
+<main class="profile-container">
+  <section class="profile-card">
+    <img src="https://i.ibb.co/sFmpG2P/user-avatar.png" alt="Profile" />
+    <h2>Likhitha</h2>
+    <p>🎓 B.Tech CSE Student | Guntur</p>
+    <p><strong>Interests:</strong> Sketching, Music, New Tech</p>
+
+    <div class="dream-list">
+      <h3>💭 My Dreams</h3>
+      <div class="dream-grid">
+        <div class="dream-card">💻 Become a Full-Stack Developer</div>
+        <div class="dream-card">🌐 Build a Portfolio Website</div>
+        <div class="dream-card">🤝 Contribute to Open Source</div>
+        <div class="dream-card">🏢 Crack a Product-Based Company</div>
+        <div class="dream-card">📝 Launch a Tech Blog</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="progress-section">
+    <h3>🏆 Dream: Become Full-Stack Developer</h3>
+
+    <div class="step-box"><span>🚀 Step 1: Learn HTML/CSS</span><span class="step-status">✅</span></div>
+    <div class="step-box incomplete"><span>Step 2: JavaScript Mastery</span><span class="step-status">⏳</span></div>
+    <div class="step-box incomplete"><span>Step 3: React & Node.js</span><span class="step-status">⏳</span></div>
+    <div class="step-box incomplete"><span>Step 4: Build Projects</span><span class="step-status">⬜</span></div>
+
+    <h3>📚 Learning Progress</h3>
+    <div class="bar">
+      <label>HTML/CSS</label>
+      <div class="progress"><div style="width: 100%;">100%</div></div>
+    </div>
+    <div class="bar">
+      <label>JavaScript</label>
+      <div class="progress"><div style="width: 70%;">70%</div></div>
+    </div>
+    <div class="bar">
+      <label>React</label>
+      <div class="progress"><div style="width: 45%;">45%</div></div>
+    </div>
+    <div class="bar">
+      <label>Build Projects</label>
+      <div class="progress"><div style="width: 0%;">0%</div></div>
+    </div>
+
+    <div class="legend">
+      <h4>🗂 Step Legend</h4>
+      <p>✅ = Completed</p>
+      <p>⏳ = In Progress</p>
+      <p>⬜ = Not Started</p>
+    </div>
+  </section>
+
+  <!-- New Social Highlights Section -->
+    <!-- New Social Highlights Section -->
+  <section class="social-highlights">
+    <h3>🌟 Social Highlights</h3>
+    <div class="highlight-item">👥 Followers: 1,234</div>
+    <div class="highlight-item">🔗 Following: 567</div>
+    <div class="highlight-item">❤️ Profiles You Liked: 89</div>
+    <div class="highlight-item">👍 Profiles Who Liked You: 102</div>
+    <div class="highlight-item">🎯 Dreams Achieved: 5</div>
+    <div class="highlight-item">🗨 Comments Made: 142</div>
+    <div class="highlight-item">🏅 Badges Earned: 8</div>
+    <div class="highlight-item">⏰ Last Active: 2 hours ago</div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 DreamConnect • Stay motivated and connected!</p>
+</footer>
+
+</body>
+</html>

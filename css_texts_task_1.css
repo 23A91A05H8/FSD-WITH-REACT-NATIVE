@@ -1,0 +1,47 @@
+.h1{
+     text-shadow:5px 5px 2px rgb(0,0,255,0.6);
+}
+.para2{
+    text-align:left;
+    text-align-last:left;
+    color:pink; 
+    text-decoration-line:underline;
+    text-decoration-color:blueviolet;
+    text-decoration-style:dashed;
+    text-decoration-thickness:5px;
+    line-height:20px;
+  
+}
+.para3{
+   text-align:right;
+   text-align-last:right;
+   color:rgb(0,0,255,0.6);
+    text-decoration-line:overline;
+     text-decoration-style:dotted;
+      text-transform: capitalize;
+      letter-spacing:5px;
+}
+.para4{
+   text-align:center;
+   text-align-last:justify;
+   color:#abcdab;
+    text-decoration-line:line-through;
+     text-decoration-style:double;
+      text-transform: lowercase;
+      word-spacing: 4px ;
+}
+.para5{
+     text-align:justify;
+     text-align-last:justify;
+     color:hsl(360,50%,50%);
+      text-decoration-style:solid;
+      text-transform: uppercase;
+      text-indent:20px
+     
+
+}
+.para6{
+    direction:ltr;
+    direction:rtl;
+    text-decoration:underline overline line-through green dashed 4px;
+}

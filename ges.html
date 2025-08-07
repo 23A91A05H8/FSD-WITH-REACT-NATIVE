@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hi</title>
+  <link rel="stylesheet" href="mobile_options.css">
+</head>
+<body>
+
+  <button class="open-btn" onclick="openMenu()">☰</button>
+
+  <div class="options" id="sideMenu">
+    <span class="close-btn" onclick="closeMenu()">&times;</span>
+    <div>Home</div>
+    <div>Services</div>
+    <div>Contact Us</div>
+    <div>Menu</div>
+    <div>About</div>
+    <div>Details</div>
+  </div>
+
+  <script>
+    function openMenu() {
+      document.getElementById("sideMenu").style.left = "0";
+    }
+
+    function closeMenu() {
+      document.getElementById("sideMenu").style.left = "-250px";
+    }
+  </script>
+
+</body>
+</html>

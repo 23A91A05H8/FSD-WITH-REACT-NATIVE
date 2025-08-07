@@ -1,0 +1,15 @@
+.hi{
+    width:200px;
+    height:200px;
+    border:2px solid black;
+    /* background-image:linear-gradient(red,black,green,pink,brown); */
+  /* background-image:linear-gradient(to top left,black,brown); */
+   /* background-image:radial-gradient(black,brown 10%,green 50%,pink 75%); */
+   /* background-image:repeating-radial-gradient(black 5%,green 10%, pink 5%); */
+   /* background-image:conic-gradient(red,pink,yellow,green); */
+  /* background-image:conic-gradient(at 60% 40%, red,pink,yellow,green);
+  border-radius:50%; */
+  background:linear-gradient(to bottom,blue,red,transparent),linear-gradient(to left,green,yellow);
+}
+
+

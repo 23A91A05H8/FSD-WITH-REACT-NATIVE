@@ -1,0 +1,29 @@
+.parent1{
+    height:200px;
+    width:200px;
+    border:2px solid red;
+    background-color: bisque;
+    position:absolute;
+    top:40px;
+    right:50px;
+    z-index:1;
+}
+.parent2{
+    height:200px;
+    width:200px;
+    border:2px solid red;
+    background-color:yellow;
+    position:absolute;
+    top:100px;
+    left:100px;
+    z-index:2
+}
+.parent3{
+    height:200px;
+    width:200px;
+    border:2px solid red;
+    background-color: pink;
+    position:absolute;
+    right: 30px;
+    z-index:3;
+}

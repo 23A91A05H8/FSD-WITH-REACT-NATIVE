@@ -1,0 +1,37 @@
+body {
+    background-color: black;
+    position: relative;
+}
+
+.options {
+    width: 200px;
+    height: 100vh;
+    background-color: gray;
+    border:2px solid red;
+    position: absolute;
+    top:0px;
+    transition: left 0.5s ease-out;
+}
+
+.options span {
+    align-self: flex-end;
+    font-size: 30px;
+    cursor:pointer;
+}
+
+.options div {
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 20px;
+    color:white;
+}
+
+.options div:hover {
+    background-color: wheat;
+    text-align: center;
+   border-bottom:2px solid red;
+}
+
+button:hover {
+    background-color:gray;
+}

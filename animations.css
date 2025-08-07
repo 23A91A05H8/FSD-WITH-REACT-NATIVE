@@ -1,0 +1,104 @@
+.demo1{
+    width:250px;
+    height:250px;
+    background-color: pink;
+    animation-name: anime1;
+    animation-duration: 3s;
+    animation-iteration-count: 3;
+    position:relative;
+    left:0px;
+    animation-timing-function:ease-in;
+
+}
+.demo2{
+    width:250px;
+    height:250px;
+    background-color: blue;
+    animation-name: anime2;
+    animation-duration: 3s;
+    animation-iteration-count: 3;
+    position:relative;
+    left:0px;
+    animation-timing-function:ease-out;
+
+}
+.demo3{
+    width:250px;
+    height:250px;
+    background-color: gray;
+    animation-name: anime3;
+    animation-duration: 3s;
+    animation-iteration-count: 3;
+    position:relative;
+    left:0px;
+    animation-timing-function:ease-in-out;
+
+}
+.demo4{
+    width:250px;
+    height:250px;
+    background-color:brown;
+    animation-name: anime4;
+    animation-duration: 3s;
+    animation-iteration-count: 3;
+    position:relative;
+    left:0px;
+    animation-timing-function:linear;
+
+}
+@keyframes anime1 {
+    0%{
+         background-color: pink;
+         left:0px;
+    }
+    50%{
+        background-color:green;
+        left:250px;
+    }
+    100%{
+       background-color: blue;
+       left:500px;
+    }
+}
+@keyframes anime2 {
+    0%{
+         background-color: blue;
+          left:0px;
+    }
+    50%{
+        background-color: black;
+         left:250px;
+    }
+    100%{
+       background-color: red;
+       left:500px;
+    }
+}
+@keyframes anime3 {
+    0%{
+         background-color: gray;
+          left:0px;
+    }
+    50%{
+        background-color:violet;
+         left:250px;
+    }
+    100%{
+       background-color: indigo;
+       left:500px;
+    }
+}
+@keyframes anime4 {
+    0%{
+         background-color: brown;
+          left:0px;
+    }
+    50%{
+        background-color:darkkhaki;
+         left:250px;
+    }
+    100%{
+       background-color: skyblue;
+       left:500px;
+    }
+}

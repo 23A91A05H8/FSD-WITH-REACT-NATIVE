@@ -1,0 +1,16 @@
+/* .para{
+    color:rgba(0,255,0,1);
+    -- rgba
+} */
+/* .para{
+    color:purple;
+    -- named colours
+} */
+ /* .para{
+    color:#000000;
+    -- hexadecimal
+} */
+ .para{
+    color:hsl(40,50%,0%)
+    --hsl
+ }

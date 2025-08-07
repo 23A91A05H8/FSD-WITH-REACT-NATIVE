@@ -1,0 +1,10 @@
+ table {
+      margin-top: 20px;
+    }
+    td {
+      width: 200px;
+      height: 200px;
+      border: 2px solid red;
+      text-align: center;
+      background-color: whitesmoke;
+    }

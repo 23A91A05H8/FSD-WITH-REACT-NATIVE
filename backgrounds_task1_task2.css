@@ -1,0 +1,38 @@
+.hello{
+    /* width:960px;
+    height:619px; */
+    /* width:1200px;
+    height:1000px; */
+    width:2400px;
+    height:1800px;
+    border:5px solid red;
+    /* background-image:url(./ai-generated-7483596_960_720.jpg); */
+    background-image:url(./WhatsApp\ Image\ 2025-05-14\ at\ 23.58.37_94c6873b.jpg);
+    /* background-repeat:repeat; */
+      background-repeat:no-repeat;
+      /* background-attachment: fixed; */
+        /* background-repeat:repeat-x; */
+          /* background-repeat:repeat-y; */
+    /* background-color:pink;
+    background-repeat:repeat-y; */
+    /* background-size:100% 100%; */
+    /* background-size:50% 100%; */
+    /* background-size:25% 25%; */
+     /* background-size:50% 50%; */ 
+       background-size:cover;
+     /* background-size:contain; */
+     /* background-position:top left; */
+     /* background-position:top right; */
+     /* background-position:top center; */
+     /* background-position:center left; */
+     /* background-position:center right; */
+     background-position:center center;
+     /* background-position:bottom center; */
+     /* background-position:bottom right; */
+     /* background-position:bottom left; */
+     /* filter:blur(20px); */
+     font-size : 100px;
+     background-clip:text;
+     -webkit-text-fill-color: transparent;
+
+}

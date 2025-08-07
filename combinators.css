@@ -1,0 +1,9 @@
+/* .parent h1{ */
+/* .parent > h1{ */
+/* p + div{ */
+div ~ p{
+    color:red;
+}
+div + p{
+    color:green;
+}

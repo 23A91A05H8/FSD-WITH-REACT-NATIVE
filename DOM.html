@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Hi</title>
+        <link rel="stylesheet" href="DOM.css">
+    </head>
+    <body>
+          <p>Paragraph-1</p>
+        <p>Paragraph-2</p>
+            <p>Paragraph-3</p>
+            <div class="demo">demo-tag</div>
+             <span class="demo">demo-tag</span>
+             <div class="demo-id">demo-tag</div>
+             <img class="myimage" src="./profile.jpg">
+             <button onclick="fun()">Click me to change the image</button>
+        <script>
+            // console.log(document.getElementsByTagName("p"));
+            // console.log(document.getElementsByClassName("demo"));
+            //  console.log(document.getElementById("demo-id"));
+            function fun(){
+                    // console.log(document.getElementsByClassName("myimage"));
+                    console.log(document.getElementsByClassName("myimage")[0].src);
+            }
+          
+
+        </script>
+
+    </body>
+</html>

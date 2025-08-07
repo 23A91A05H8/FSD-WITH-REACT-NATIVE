@@ -1,0 +1,49 @@
+.para1{
+    /* text-align:center; */
+    /* text-align-last:center; */
+     /* text-align-last:justify; */
+     /* text-align:justify; */
+     text-decoration:underline;
+     text-decoration-color:red;
+     /* text-decoration-style:dotted; */
+     text-decoration-style:double;
+     direction:rtl;
+}
+.para2{
+     /* text-align:left; */
+     /* text-align-last:left; */
+      /* text-align-last:justify; */
+       /* text-align:justify; */
+        text-decoration:overline;
+        text-decoration-color:green;
+        /* text-decoration-style:dashed; */
+         text-decoration-style:solid;
+        direction:ltr;
+}
+.para3{
+    /* text-align:right; */
+    /* text-align-last:right; */
+    /* text-align-last:justify; */
+      /* text-align:justify; */
+       /* text-decoration:line-through; */
+       text-decoration: underline red dotted 4px;
+       /* text-decoration-thickness: 4px; */
+       /* text-decoration:underline blue dashed 4px ; */
+       
+}
+.para4{
+     /* text-transform:uppercase; */
+     /* text-transform:lowercase; */
+     text-transform:capitalize;
+}
+.para5{
+  /* letter-spacing:5px; */
+  /* word-spacing:20px; */
+  /* line-height:20px; */
+  text-indent:50px;
+    
+}
+.para6{
+     /* text-shadow:5px 5px 3px red; */
+      text-shadow:-5px -5px 3px red;
+}

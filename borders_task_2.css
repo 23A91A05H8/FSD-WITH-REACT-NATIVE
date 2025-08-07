@@ -1,0 +1,20 @@
+.parent{
+     width:500px;
+     height:500px;
+     color:pink;
+     border-top: 2px solid red;
+     border-bottom: 3px dashed green;
+     border-left: 4px dotted yellow;
+     border-right: 5px double black;
+     border-bottom-left-radius:250px;
+     border-bottom-right-radius:250px;
+     background-color: brown;
+
+}
+.child{
+    width:calc(500px - 250px);
+    height:calc(500px - 250px);
+    border:5px groove purple;
+    border-radius:5000px;
+    background-color: aqua;
+}
